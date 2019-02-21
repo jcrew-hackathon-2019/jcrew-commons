@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './app.scss';
 
 import Sidebar from './components/Sidebar'
+import Welcome from './components/Sections/Welcome'
+import ButtonSection from './components/Sections/ButtonSection'
 
 class App extends Component {
   constructor() {
@@ -11,18 +13,24 @@ class App extends Component {
     }
   }
 
-  sectionChange = (section) => this.setState({ section })
+  navigateSection = (section) => this.setState({ section })
 
   render() {
+    const {
+      section
+    } = this.state
 
-    // const body = {
-
-    // }
+    const body = {
+      welcome: <Welcome />,
+      buttons: <ButtonSection />,
+    }[section]
 
     return (
       <main>
-        <Sidebar />
-        {/* {body} */}
+        <Sidebar
+          navigateSection={this.navigateSection}
+        />
+        {body}
       </main>
     );
   }
