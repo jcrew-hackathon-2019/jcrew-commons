@@ -111,6 +111,9 @@ body {
   -webkit-font-smoothing: antialiased;
 	background: $color-gray;
 }
+main {
+	padding: 35px 35px 35px 335px;
+}
 input, button, select, textarea {
 	font-family: soleil, serif;
 	-webkit-font-smoothing: antialiased;
