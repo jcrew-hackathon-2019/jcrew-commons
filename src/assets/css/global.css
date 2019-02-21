@@ -106,4 +106,8 @@ a {
           color: #00AD77;
           background: #F5F5F5; }
 
+.commons--content {
+  margin-left: 300px;
+  width: calc(100% - 300px); }
+
 /*# sourceMappingURL=global.css.map */

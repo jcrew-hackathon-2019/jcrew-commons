@@ -90,9 +90,6 @@ $color-green-alt:#00AD77;
 
 
 
-
-// base styles
-
 * {
   margin: 0;
   padding: 0;
@@ -213,5 +210,6 @@ a {
 	}
 }
 .commons--content {
-	
+	margin-left: 300px;
+	width: calc(100% - 300px);
 }
