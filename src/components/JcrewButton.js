@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import cx from 'classnames'
+import ButtonSection from './Sections/ButtonSection';
 
 class JcrewButton extends Component {
 
@@ -8,12 +10,18 @@ class JcrewButton extends Component {
       onClick,
       children,
       className,
+      theme,
+      pending,
+      disabled,
       ...rest
     } = this.props
 
     return (
       <button
-        className={className}
+        className={cx(className `button--${theme}`, {
+          'pending': pending,
+          'disabled': disabled,
+        })}
         onClick={onClick}
         {...rest}
       >
