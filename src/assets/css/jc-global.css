@@ -1,0 +1,15 @@
+.commons--content-examples {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: soleil, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: .3px;
+  color: #000;
+  -webkit-font-smoothing: antialiased; }
+  .commons--content-examples input, .commons--content-examples button, .commons--content-examples select, .commons--content-examples textarea {
+    font-family: soleil, serif;
+    -webkit-font-smoothing: antialiased; }
+
+/*# sourceMappingURL=jc-global.css.map */

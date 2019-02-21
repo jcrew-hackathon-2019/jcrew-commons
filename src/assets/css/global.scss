@@ -142,6 +142,10 @@ a {
 	  outline: 1px dotted #000;
 	}
 }
+img {
+	display: block;
+	max-width: 100%;
+}
 
 
 .commons--nav {
@@ -209,7 +213,29 @@ a {
 		}
 	}
 }
+
 .commons--content {
 	margin-left: 300px;
 	width: calc(100% - 300px);
+	
+	section {
+		margin: 0 auto;
+		padding: 30px;
+		max-width: 960px;
+		
+		&.commons--content-usage {
+			
+			.commons--content-code {
+				background: #FFF;
+				@extend %border-radius;
+				@extend %shadow-box;	
+			}	
+			
+			.commons--content-examples {
+				background: #FFF;
+				@extend %border-radius;
+				@extend %shadow-box;			
+			}			
+		}
+	}
 }
