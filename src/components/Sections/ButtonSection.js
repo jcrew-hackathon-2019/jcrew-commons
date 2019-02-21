@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import SyntaxSection from './SyntaxSection'
 
 const codeSample = `  render() {
   const {
@@ -42,10 +43,19 @@ class ButtonSection extends Component {
       <div>
         <h1>Buttons</h1>
         <hr className='hr-with-margin'/>
-        <SyntaxHighlighter
-          language='jsx'
-          showLineNumbers
-        >{codeSample}</SyntaxHighlighter>
+
+        <SyntaxSection
+          codeSample={codeSample}
+        />
+
+
+        {/* <div className="syntax-container" onClick={} style={{'height':'250px'}}>
+          <SyntaxHighlighter
+            language='jsx'
+            showLineNumbers
+            customStyle={{'height':'250px'}}
+          >{codeSample}</SyntaxHighlighter>
+        </div> */}
         <h2>Usage</h2>
 
       </div>

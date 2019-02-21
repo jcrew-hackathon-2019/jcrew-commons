@@ -224,3 +224,20 @@ a {
 		margin: 12px 0;
 	}
 }
+
+
+.syntax-container {
+	overflow: hidden;
+	margin: 20px;
+	cursor: pointer;
+	&-click {
+		position: relative;
+		top: 215px;
+		left: 300PX;
+		background: grey;
+		width: 130px;
+		padding: 3px 12px;
+		color: white;
+		border-radius: 20px;
+	}
+}
