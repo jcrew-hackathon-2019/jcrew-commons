@@ -1,6 +1,5 @@
 .syntax-container {
 	overflow: hidden;
-  cursor: pointer;
   margin: 0 auto;
   width: 800px;
   position: relative;
@@ -14,6 +13,7 @@
     color: white;
     border-radius: 20px;
     font-size: 12px;
+    cursor: pointer;
   }
   &-copy {
     position: absolute;
