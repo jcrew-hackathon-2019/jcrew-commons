@@ -59,7 +59,9 @@ class App extends Component {
           navigateSection={this.navigateSection}
           activeSection={activeSection}
         />
-        {body}
+        <div className='commons--content'>
+          {body}
+        </div>
       </main>
     );
   }
