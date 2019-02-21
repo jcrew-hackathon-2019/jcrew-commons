@@ -20,9 +20,11 @@ class SyntaxBlock extends Component {
     return (
       <div className="syntax-container" onClick={this.toggleHeight} style={{'height':currentHeight}}>
         <div className="syntax-container-click">{clickLabel}</div>
-        <CopyToClipboard text={codeSample}>
-        <button className="syntax-container-copy">Copy to clipboard with button</button>
-        </CopyToClipboard>
+        <div onClick={e => e.stopPropagation()}>
+          <CopyToClipboard text={codeSample}>
+            <button className="syntax-container-copy">Copy</button>
+          </CopyToClipboard>
+        </div>
         <SyntaxHighlighter
           language='jsx'
           showLineNumbers
