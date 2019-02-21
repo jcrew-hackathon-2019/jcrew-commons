@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import SyntaxSection from './SyntaxSection'
+import SyntaxBlock from '../SyntaxBlock'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const codeSample = `  render() {
@@ -55,7 +55,7 @@ class ButtonSection extends Component {
         <h1>Buttons</h1>
         <hr className='hr-with-margin'/>
 
-        <SyntaxSection
+        <SyntaxBlock
           codeSample={codeSample}
         />
 

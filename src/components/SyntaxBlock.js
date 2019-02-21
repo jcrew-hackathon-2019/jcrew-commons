@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
-class SyntaxSection extends Component {
+class SyntaxBlock extends Component {
   state = {
     currentHeight: '250px'
   }
@@ -28,4 +28,4 @@ class SyntaxSection extends Component {
   }
 }
 
-export default SyntaxSection
+export default SyntaxBlock
