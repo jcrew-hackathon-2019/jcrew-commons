@@ -35,18 +35,19 @@ const codeSample = `  render() {
     </main>
   );`
 
-
-
 class ButtonSection extends Component {
 
   render() {
     return (
       <div>
-        <p>ButtonSection!</p>
+        <h1>Buttons</h1>
+        <hr className='hr-with-margin'/>
         <SyntaxHighlighter
           language='jsx'
           showLineNumbers
         >{codeSample}</SyntaxHighlighter>
+        <h2>Usage</h2>
+
       </div>
     )
   }
