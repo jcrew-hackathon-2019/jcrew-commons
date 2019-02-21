@@ -1,0 +1,109 @@
+.commons--nav .commons--nav-subnav ul li a {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px; }
+
+.commons--nav {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: .3px;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  background: #F5F5F5; }
+
+input, button, select, textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: -0.3px;
+  line-height: 20px; }
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700; }
+
+h3 {
+  padding: 0 30px;
+  margin: 0 0 15px;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 0; }
+
+a {
+  color: #00AD77;
+  text-decoration: none; }
+  a:focus {
+    outline: 1px dotted #000; }
+
+.commons--nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 300px;
+  height: 100%;
+  background: #FFF; }
+  .commons--nav .commons--nav-main {
+    width: 60px;
+    height: 100%;
+    background: #05AF71; }
+    .commons--nav .commons--nav-main .commons-nav-logo {
+      margin: 8px;
+      width: 44px;
+      height: 44px; }
+      .commons--nav .commons--nav-main .commons-nav-logo a {
+        display: block;
+        width: 44px;
+        height: 44px;
+        text-indent: -9999px;
+        background: url("../img/jcrew-commons-logo.svg") no-repeat center center; }
+  .commons--nav .commons--nav-subnav {
+    padding: 30px 0;
+    width: 240px;
+    height: 100%;
+    background: #FFF;
+    overflow: scroll; }
+    .commons--nav .commons--nav-subnav ul {
+      list-style: none;
+      margin-bottom: 25px;
+      padding: 0 15px; }
+      .commons--nav .commons--nav-subnav ul li {
+        width: 100%;
+        font-size: 14px; }
+        .commons--nav .commons--nav-subnav ul li a {
+          display: block;
+          padding: 0 15px;
+          height: 40px;
+          line-height: 40px;
+          color: #000; }
+          .commons--nav .commons--nav-subnav ul li a:hover {
+            background: #F5F5F5; }
+        .commons--nav .commons--nav-subnav ul li.active a {
+          color: #00AD77;
+          background: #F5F5F5; }
+
+/*# sourceMappingURL=global.css.map */

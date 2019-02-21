@@ -1,7 +1,7 @@
 $color-white:#FFF;
 $color-black:#000;
-$color-grey:#F5F5F5;
-$color-grey-border:#E5E5E5;
+$color-gray:#F5F5F5;
+$color-gray-border:#E5E5E5;
 $color-green:#05AF71;
 $color-green-alt:#00AD77;
 
@@ -109,6 +109,10 @@ body {
   letter-spacing: .3px;
   color: #000;
   -webkit-font-smoothing: antialiased;
+	background: $color-gray;
+}
+main {
+	padding: 35px 35px 35px 335px;
 }
 input, button, select, textarea {
 	font-family: soleil, serif;
@@ -128,6 +132,16 @@ h2 {
 	line-height: 16px;
 	font-weight: 700;
 }
+h3 {
+	padding: 0 30px;
+	margin: 0 0 15px;
+	font-family: SFUIText-Bold;
+	font-size: 11px;
+	line-height: 11px;
+	text-transform: uppercase;
+	color: $color-black;
+	letter-spacing: 0;
+}
 a {
 	color: $color-green-alt;
 	text-decoration: none;
@@ -135,4 +149,75 @@ a {
 	&:focus {
 	  outline: 1px dotted #000;
 	}
+}
+
+
+.commons--nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	width: 300px;
+	height: 100%;
+	background: $color-white;
+	@extend %shadow-wide;
+
+	.commons--nav-main {
+		width: 60px;
+		height: 100%;
+		background: $color-green;
+
+		.commons-nav-logo {
+			margin: 8px;
+			width: 44px;
+			height: 44px;
+
+			a {
+				display: block;
+				width: 44px;
+				height: 44px;
+				text-indent: -9999px;
+				background: url('./assets/img/jcrew-commons-logo.svg') no-repeat center center;
+			}
+		}
+
+	}
+
+	.commons--nav-subnav {
+		padding: 30px 0;
+		width: 240px;
+		height: 100%;
+		background: $color-white;
+		overflow: scroll;
+
+		ul {
+			list-style: none;
+			margin-bottom: 25px;
+			padding: 0 15px;
+
+			li {
+				width: 100%;
+				font-family: SFUIText-Medium;
+				font-size: 14px;
+				a {
+					@extend %border-radius;
+					display: block;
+					padding: 0 15px;
+					height: 40px;
+					line-height: 40px;
+					color: $color-black;
+					&:hover {
+						background: $color-gray;
+					}
+				}
+				&.active a {
+					color: $color-green-alt;
+					background: $color-gray;
+				}
+			}
+		}
+	}
+}
+.commons--content {
+
 }
