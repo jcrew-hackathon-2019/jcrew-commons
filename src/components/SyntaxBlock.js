@@ -4,19 +4,22 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class SyntaxBlock extends Component {
   state = {
-    currentHeight: '250px'
+    currentHeight: '250px',
+    clickLabel: 'Click to expand',
   }
 
   toggleHeight = () => {
-    this.setState({currentHeight: this.state.currentHeight!=='auto' ? 'auto' : '250px'})
+    this.setState({currentHeight: this.state.currentHeight!=='auto' ? 'auto' : '250px',
+    clickLabel: this.state.clickLabel!=='Click to collapse' ? 'Click to collapse' : 'Click to expand'
+    })
   }
 
   render() {
-    const {currentHeight} = this.state
+    const {currentHeight, clickLabel} = this.state
     const {codeSample} = this.props
     return (
       <div className="syntax-container" onClick={this.toggleHeight} style={{'height':currentHeight}}>
-        <div className="syntax-container-click">Click to expand</div>
+        <div className="syntax-container-click">{clickLabel}</div>
         <CopyToClipboard text={codeSample}>
         <button className="syntax-container-copy">Copy to clipboard with button</button>
         </CopyToClipboard>
