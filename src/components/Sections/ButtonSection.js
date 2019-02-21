@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const codeSample = `  render() {
   const {
@@ -37,6 +38,16 @@ const codeSample = `  render() {
 
 class ButtonSection extends Component {
 
+  copyText = () => {
+    const textarea = document.createElement('textarea')
+    document.body.appendChild(textarea)
+    textarea.setAttribute('value', codeSample)
+    textarea.select()
+    console.log(textarea)
+    document.execCommand('copy');
+    document.body.removeChild(textarea)
+  }
+
   render() {
     return (
       <div>
@@ -46,8 +57,11 @@ class ButtonSection extends Component {
           language='jsx'
           showLineNumbers
         >{codeSample}</SyntaxHighlighter>
-        <h2>Usage</h2>
 
+        <CopyToClipboard text={codeSample}>
+        <button>Copy to clipboard with button</button>
+        </CopyToClipboard>
+        <h2>Usage</h2>
       </div>
     )
   }
