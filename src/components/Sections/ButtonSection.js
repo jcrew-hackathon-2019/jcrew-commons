@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import SyntaxBlock from '../SyntaxBlock'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
