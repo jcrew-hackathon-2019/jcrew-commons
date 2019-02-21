@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: soleil, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: .3px;
+  color: #000;
+  -webkit-font-smoothing: antialiased; }
+
+input, button, select, textarea {
+  font-family: soleil, serif;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  font-family: freightbig pro;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: -0.3px;
+  line-height: 20px; }
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700; }
+
+a {
+  color: #00AD77;
+  text-decoration: none; }
+  a:focus {
+    outline: 1px dotted #000; }
+
+/*# sourceMappingURL=global.css.map */
