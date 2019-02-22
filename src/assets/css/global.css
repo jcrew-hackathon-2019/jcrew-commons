@@ -5,7 +5,7 @@
   -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s; }
 
-.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy {
+.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy, .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -203,5 +203,17 @@ img {
                 opacity: 1; }
       .commons--content section.commons--content-usage .commons--content-variations .commons--content-code {
         padding: 30px 0; }
+    .commons--content section.commons--content-properties .commons--content-property {
+      margin-bottom: 30px; }
+      .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header {
+        margin: 10px 0;
+        border-bottom: 1px solid #E5E5E5; }
+        .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code {
+          font-size: 13px;
+          padding: 4px 6px; }
+        .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code:first-child {
+          background: red; }
+        .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code:last-child {
+          background: blue; }
 
 /*# sourceMappingURL=global.css.map */

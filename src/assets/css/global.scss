@@ -340,9 +340,31 @@ img {
 				
 				.commons--content-code {
 					padding: 30px 0;
-				
 				}				
 			}		
+		}
+		&.commons--content-properties {
+			.commons--content-property {
+					margin-bottom: 30px;
+					
+				.commons--content-property-header {
+					margin: 10px 0;
+					border-bottom: 1px solid $color-gray-border;
+					
+					code {
+						font-size: 13px;
+						padding: 4px 6px;
+						@extend %border-radius;
+					}					
+					code:first-child {
+						background: red;
+						
+					}
+					code:last-child {
+						background: blue;
+					}
+				}
+			}
 		}
 	}
 }
