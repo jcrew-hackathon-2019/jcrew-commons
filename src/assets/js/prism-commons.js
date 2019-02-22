@@ -15,7 +15,7 @@ export default {
         "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
-        "background": "#FFF",
+        "background": "transparent",
         "color": "#00CD4F"
     },
     "pre[class*=\"language-\"]": {
@@ -34,8 +34,8 @@ export default {
         "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
-        "background": "#FFF",
-        "color": "#00CD4F",
+        "background": "transparent",
+        "color": "#000",
         "padding": "1em",
         "margin": ".5em 0",
         "overflow": "auto"
