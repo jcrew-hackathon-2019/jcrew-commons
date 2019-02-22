@@ -308,16 +308,11 @@ img {
 							background: $color-gray;
 							@extend %border-radius;	
 							
-							code {
-								position: relative;				
-							}
-							
 						}	
 					}
 				}	
 				
 				.commons--content-code {
-					padding: 30px 0;
 				}				
 			}		
 		}
