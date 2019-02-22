@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { commons } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class SyntaxBlock extends Component {
@@ -17,6 +18,7 @@ class SyntaxBlock extends Component {
   }
 
   render() {
+    console.log(commons)
     const {
       currentHeight,
       clickLabel,
@@ -43,6 +45,7 @@ class SyntaxBlock extends Component {
           language='jsx'
           showLineNumbers
           customStyle={{'height': currentHeight}}
+          style={commons}
         >
           {code}
         </SyntaxHighlighter>
