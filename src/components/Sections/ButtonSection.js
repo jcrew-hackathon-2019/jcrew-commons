@@ -285,8 +285,20 @@ class ButtonSection extends Component {
             <p>Add a classname to the button.</p>
           </div>
           <div class="commons--content-property">
-            <div class="commons--content-property-header"><code>className</code> <code>string</code></div>
-            <p>Add a classname to the button.</p>
+            <div class="commons--content-property-header"><code>onClick</code> <code>function</code></div>
+            <p>Add a callback to perform some action</p>
+          </div>
+          <div class="commons--content-property">
+            <div class="commons--content-property-header"><code>theme</code> <code>string</code></div>
+            <p>Choose between the different themes such as <span className="italic">blue</span>, <span className="italic"> white</span>, <span className="italic"> subtle</span>, <span className="italic"> add-to-bag</span>,<span className="italic"> cta</span>,<span className="italic"> quickshop</span>,<span className="italic"> pill</span></p>
+          </div>
+          <div class="commons--content-property">
+            <div class="commons--content-property-header"><code>pending</code> <code>boolean</code></div>
+            <p>Add a spinner on button upon user interaction</p>
+          </div>
+          <div class="commons--content-property">
+            <div class="commons--content-property-header"><code>disabled</code> <code>boolean</code></div>
+            <p>Button will appear disabled</p>
           </div>
         </section>
       </div>
