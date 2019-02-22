@@ -1,11 +1,11 @@
-.commons--nav .commons--nav-subnav ul li a, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy {
+.commons--nav .commons--nav-subnav ul li a, .syntax-container-copy {
   -webkit-transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
   -ms-transition: all 0.2s ease-in-out 0s;
   -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s; }
 
-.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy, .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code {
+.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd, .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code, .syntax-container-copy {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -16,12 +16,12 @@
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
 
-.commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy:hover {
+.commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .syntax-container-copy:hover {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15); }
 
-.commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy:active {
+.syntax-container-copy:active {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0);
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0); }
@@ -186,21 +186,6 @@ img {
             background: #F5F5F5; }
             .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd code {
               position: relative; }
-            .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              width: 30px;
-              height: 30px;
-              background: transparent url("../img/icon-copy.svg") no-repeat center center;
-              opacity: .5;
-              cursor: pointer; }
-              .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy:hover {
-                background-color: #FFF;
-                opacity: 1; }
-              .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd .copy:active {
-                background-color: #FFF;
-                opacity: 1; }
       .commons--content section.commons--content-usage .commons--content-variations .commons--content-code {
         padding: 30px 0; }
     .commons--content section.commons--content-properties .commons--content-property {
@@ -215,5 +200,37 @@ img {
           background: red; }
         .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code:last-child {
           background: blue; }
+
+.syntax-container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 800px;
+  position: relative; }
+  .syntax-container-click {
+    position: absolute;
+    bottom: 5%;
+    right: 43%;
+    background: rgba(0, 0, 0, 0.7);
+    width: 141px;
+    padding: 2px 22px;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer; }
+  .syntax-container-copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: transparent url("../img/icon-copy.svg") no-repeat center center;
+    opacity: .5;
+    cursor: pointer; }
+    .syntax-container-copy:hover {
+      background-color: #FFF;
+      opacity: 1; }
+    .syntax-container-copy:active {
+      background-color: #FFF;
+      opacity: 1; }
 
 /*# sourceMappingURL=global.css.map */

@@ -311,29 +311,7 @@ img {
 							code {
 								position: relative;				
 							}
-							.copy {
-								position: absolute;
-								top: 10px;
-								right: 10px;
-								width: 30px;
-								height: 30px;
-								background: transparent url('../img/icon-copy.svg') no-repeat center center;
-								opacity: .5;
-								cursor: pointer;
-								@extend %border-radius;	
-								@extend %transition-all-text;
-								
-								&:hover {
-									background-color: $color-white;
-									opacity: 1;
-									@extend %shadow-box;
-								}
-								&:active {
-									background-color: $color-white;
-									opacity: 1;
-									@extend %shadow-none;
-								}								
-							}
+							
 						}	
 					}
 				}	
@@ -366,5 +344,46 @@ img {
 				}
 			}
 		}
+	}
+}
+.syntax-container {
+	overflow: hidden;
+  margin: 0 auto;
+  width: 800px;
+  position: relative;
+	&-click {
+    position: absolute;
+    bottom: 5%;
+    right: 43%;
+    background:rgba(0,0,0,0.7);
+    width: 141px;
+    padding: 2px 22px;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+	&-copy {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 30px;
+		height: 30px;
+		background: transparent url('../img/icon-copy.svg') no-repeat center center;
+		opacity: .5;
+		cursor: pointer;
+		@extend %border-radius;	
+		@extend %transition-all-text;
+		
+		&:hover {
+			background-color: $color-white;
+			opacity: 1;
+			@extend %shadow-box;
+		}
+		&:active {
+			background-color: $color-white;
+			opacity: 1;
+			@extend %shadow-none;
+		}								
 	}
 }
