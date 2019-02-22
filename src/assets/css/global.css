@@ -181,7 +181,7 @@ img {
             max-width: 375px; }
           .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd {
             position: relative;
-            padding: 15px;
+            padding: 0;
             width: 50%;
             background: #F5F5F5; }
             .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd code {
@@ -197,9 +197,9 @@ img {
           font-size: 13px;
           padding: 4px 6px; }
         .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code:first-child {
-          background: red; }
+          background: #05AF71; }
         .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code:last-child {
-          background: blue; }
+          background: #E5E5E5; }
 
 .syntax-container {
   overflow: hidden;
@@ -220,7 +220,7 @@ img {
   .syntax-container-copy {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 0;
     width: 30px;
     height: 30px;
     background: transparent url("../img/icon-copy.svg") no-repeat center center;
