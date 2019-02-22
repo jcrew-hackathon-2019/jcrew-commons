@@ -18,7 +18,6 @@ class SyntaxBlock extends Component {
   }
 
   render() {
-    console.log(commons)
     const {
       currentHeight,
       clickLabel,
