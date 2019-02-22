@@ -123,10 +123,14 @@ button {
 	&.button--pdp-secondary {
 		@extend %btn-36;
 		@extend %btn-light;
+		width: 100%;
 		color: $color-black;
 		background: $color-grey-bg-light;
 		&:hover {
 			background: #E2E2E2;
+		}
+		&:not(:first-child) {
+			margin-left: 12px;
 		}
 	}
 	
@@ -184,22 +188,6 @@ button {
 	&:focus {
 	  outline: 1px dotted $color-black;
 	}
-}
-
-dl {
-	margin: 30px;
-	display: flex;
-	
-	dt {
-		padding: 15px;
-		width: 50%;
-		max-width: 375px;
-	}
-	
-	dd {
-		padding: 15px;
-		width: 50%;
-	}	
 }
 
 .product-tile {

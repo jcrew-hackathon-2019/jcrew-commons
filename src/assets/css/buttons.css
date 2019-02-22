@@ -126,10 +126,13 @@ button {
     button.button--quickshop:active {
       position: absolute; }
   button.button--pdp-secondary {
+    width: 100%;
     color: #000;
     background: #F2F2F2; }
     button.button--pdp-secondary:hover {
       background: #E2E2E2; }
+    button.button--pdp-secondary:not(:first-child) {
+      margin-left: 12px; }
   button.button--add-to-bag {
     color: #FFF;
     background: #000; }
@@ -169,17 +172,6 @@ button {
     border-radius: 0; }
   button:focus {
     outline: 1px dotted #000; }
-
-dl {
-  margin: 30px;
-  display: flex; }
-  dl dt {
-    padding: 15px;
-    width: 50%;
-    max-width: 375px; }
-  dl dd {
-    padding: 15px;
-    width: 50%; }
 
 .product-tile {
   position: relative;

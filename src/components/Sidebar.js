@@ -15,7 +15,7 @@ class Sidebar extends Component {
           <div class="commons-nav-logo"><a href="#">J.Crew Commons</a></div>
         </div>
         <div class="commons--nav-subnav">
-          <div class="commons--subnav-header"></div>
+          <div class="commons--subnav-header"><a href="#">/commons</a></div>
           <h3>Framework</h3>
           <ul>
             <li className={cx({

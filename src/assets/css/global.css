@@ -1,4 +1,11 @@
-.commons--nav .commons--nav-subnav ul li a, .commons--content section.commons--content-usage .commons--content-code, .commons--content section.commons--content-usage .commons--content-examples {
+.commons--nav .commons--nav-subnav ul li a, .syntax-container-copy {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s; }
+
+.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--import-code, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd, .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code, .syntax-container-copy {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -9,10 +16,15 @@
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
 
-.commons--content section.commons--content-usage .commons--content-code, .commons--content section.commons--content-usage .commons--content-examples {
+.commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--import-code, .commons--content section.commons--content-usage .commons--content-variations, .syntax-container-copy:hover {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15); }
+
+.syntax-container-copy:active {
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0); }
 
 * {
   margin: 0;
@@ -55,7 +67,7 @@ h3 {
   font-size: 11px;
   line-height: 11px;
   text-transform: uppercase;
-  color: #000;
+  color: #05AF71;
   letter-spacing: 0; }
 
 a {
@@ -91,11 +103,19 @@ img {
         text-indent: -9999px;
         background: url("../img/jcrew-commons-logo.svg") no-repeat center center; }
   .commons--nav .commons--nav-subnav {
-    padding: 30px 0;
+    padding: 0;
     width: 240px;
     height: 100%;
     background: #FFF;
     overflow: scroll; }
+    .commons--nav .commons--nav-subnav .commons--subnav-header {
+      margin: 18px 0 30px 15px; }
+      .commons--nav .commons--nav-subnav .commons--subnav-header a {
+        display: block;
+        width: 134px;
+        height: 26px;
+        text-indent: -9999px;
+        background: url("../img/commons-logo.svg") no-repeat left top; }
     .commons--nav .commons--nav-subnav ul {
       list-style: none;
       margin-bottom: 25px;
@@ -121,10 +141,101 @@ img {
   .commons--content section {
     margin: 0 auto;
     padding: 30px;
+    min-width: 640px;
     max-width: 960px; }
-    .commons--content section.commons--content-usage .commons--content-code {
+    .commons--content section.commons--content-header h1 {
+      margin-bottom: 15px; }
+    .commons--content section.commons--content-header p {
+      margin-bottom: 30px; }
+    .commons--content section .commons--content-example {
+      position: relative;
+      width: 100%;
+      height: 480px;
       background: #FFF; }
-    .commons--content section.commons--content-usage .commons--content-examples {
+      .commons--content section .commons--content-example .commons--example-container {
+        position: relative;
+        margin: 0 auto;
+        width: 372px;
+        height: 100%;
+        display: table; }
+        .commons--content section .commons--content-example .commons--example-container .commons--example-buttons {
+          display: table-cell;
+          vertical-align: middle; }
+          .commons--content section .commons--content-example .commons--example-container .commons--example-buttons .commons--example-buttons-atb {
+            margin-bottom: 12px; }
+          .commons--content section .commons--content-example .commons--example-container .commons--example-buttons .commons--example-buttons-secondary {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; }
+    .commons--content section.commons--content-usage .commons--import-code {
+      margin-bottom: 60px;
+      background: #FFF;
+      min-height: 36px;
+      width: 100%; }
+    .commons--content section.commons--content-usage .commons--content-variations {
       background: #FFF; }
+      .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples {
+        border-bottom: 1px solid #F5F5F5; }
+        .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl {
+          padding: 30px;
+          display: flex; }
+          .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dt {
+            padding-right: 30px;
+            width: 50%; }
+          .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd {
+            position: relative;
+            padding: 0;
+            width: 50%;
+            background: #F5F5F5; }
+    .commons--content section.commons--content-properties .commons--content-property {
+      margin-bottom: 30px; }
+      .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E5E5E5; }
+        .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code {
+          font-size: 13px;
+          padding: 4px 6px; }
+        .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code:first-child {
+          margin-right: 10px;
+          background: #05AF71; }
+        .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code:last-child {
+          background: #E5E5E5; }
+      .commons--content section.commons--content-properties .commons--content-property p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.4; }
+
+.syntax-container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 800px;
+  position: relative; }
+  .syntax-container-click {
+    position: absolute;
+    bottom: 5%;
+    right: 43%;
+    background: rgba(0, 0, 0, 0.7);
+    width: 141px;
+    padding: 2px 22px;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer; }
+  .syntax-container-copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: transparent url("../img/icon-copy.svg") no-repeat center center;
+    opacity: .5;
+    cursor: pointer; }
+    .syntax-container-copy:hover {
+      background-color: #FFF;
+      opacity: 1; }
+    .syntax-container-copy:active {
+      background-color: #FFF;
+      opacity: 1; }
 
 /*# sourceMappingURL=global.css.map */

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { commons } from '../css/commons'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class SyntaxBlock extends Component {
@@ -36,13 +37,14 @@ class SyntaxBlock extends Component {
         {!noExpand && <div className="syntax-container-click" onClick={this.toggleHeight} >{clickLabel}</div>}
         <div onClick={e => e.stopPropagation()}>
           <CopyToClipboard text={code}>
-            <button className="syntax-container-copy">Copy</button>
+            <button className="syntax-container-copy"/>
           </CopyToClipboard>
         </div>
         <SyntaxHighlighter
           language='jsx'
           showLineNumbers
           customStyle={{'height': currentHeight}}
+          style={commons}
         >
           {code}
         </SyntaxHighlighter>

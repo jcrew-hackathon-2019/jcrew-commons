@@ -51,6 +51,9 @@ $color-green-alt:#00AD77;
 %shadow-box {
 	@include box-shadow(0px 1px 2px rgba(0,0,0,.15));
 }
+%shadow-none {
+	@include box-shadow(0px 1px 2px rgba(0,0,0,.0));
+}
 
 @mixin bp($point) {
 
@@ -106,7 +109,7 @@ body {
   letter-spacing: .3px;
   color: #000;
   -webkit-font-smoothing: antialiased;
-	// background: $color-gray;
+	background: $color-gray;
 }
 input, button, select, textarea {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -131,7 +134,7 @@ h3 {
 	font-size: 11px;
 	line-height: 11px;
 	text-transform: uppercase;
-	color: $color-black;
+	color: $color-green;
 	letter-spacing: 0;
 }
 a {
@@ -141,6 +144,10 @@ a {
 	&:focus {
 	  outline: 1px dotted #000;
 	}
+}
+img {
+	display: block;
+	max-width: 100%;
 }
 
 
@@ -198,11 +205,23 @@ a {
 	}
 
 	.commons--nav-subnav {
-		padding: 30px 0;
+		padding: 0;
 		width: 240px;
 		height: 100%;
 		background: $color-white;
 		overflow: scroll;
+
+		.commons--subnav-header {
+			margin: 18px 0 30px 15px;
+
+			a {
+				display: block;
+				width: 134px;
+				height: 26px;
+				text-indent: -9999px;
+				background: url('../assets/img/commons-logo.svg') no-repeat left top;
+			}
+		}
 
 		ul {
 			list-style: none;
@@ -219,6 +238,7 @@ a {
 					height: 40px;
 					line-height: 40px;
 					color: $color-black;
+					@extend %transition-all-text;
 					&:hover {
 						background: $color-gray;
 					}
@@ -231,7 +251,161 @@ a {
 		}
 	}
 }
+
 .commons--content {
 	margin-left: 300px;
 	width: calc(100% - 300px);
+
+	section {
+		margin: 0 auto;
+		padding: 30px;
+		min-width: 640px;
+		max-width: 960px;
+
+		&.commons--content-header {
+			h1 {
+				margin-bottom: 15px;
+			}
+			p {
+				margin-bottom: 30px;
+			}
+		}
+
+		.commons--content-example {
+			position: relative;
+			width: 100%;
+			height: 480px;
+			background: #FFF;
+			@extend %border-radius;
+			@extend %shadow-box;
+
+			.commons--example-container {
+				position: relative;
+				margin: 0 auto;
+				width: 372px;
+				height: 100%;
+				display: table;
+
+				.commons--example-buttons {
+					display: table-cell;
+					vertical-align: middle;
+
+					.commons--example-buttons-atb {
+						margin-bottom: 12px;
+					}
+
+					.commons--example-buttons-secondary {
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&.commons--content-usage {
+
+			.commons--content-variations {
+				background: #FFF;
+				@extend %border-radius;
+				@extend %shadow-box;
+
+				.commons--content-examples {
+					padding: 30px 0;
+					border-bottom: 1px solid $color-gray;
+					dl {
+						margin: 30px;
+						display: flex;
+
+						dt {
+							padding: 15px;
+							width: 50%;
+							max-width: 375px;
+						}
+
+						dd {
+							position: relative;
+							padding: 15px;
+							width: 50%;
+							background: $color-gray;
+							@extend %border-radius;
+
+							code {
+								position: relative;
+							}
+
+						}
+					}
+				}
+
+				.commons--content-code {
+					padding: 30px 0;
+				}
+			}
+		}
+		&.commons--content-properties {
+			.commons--content-property {
+					margin-bottom: 30px;
+
+				.commons--content-property-header {
+					margin: 10px 0;
+					border-bottom: 1px solid $color-gray-border;
+
+					code {
+						font-size: 13px;
+						padding: 4px 6px;
+						@extend %border-radius;
+					}
+					code:first-child {
+						background: red;
+
+					}
+					code:last-child {
+						background: blue;
+					}
+				}
+			}
+		}
+	}
+}
+.syntax-container {
+	overflow: hidden;
+  margin: 0 auto;
+  width: 800px;
+  position: relative;
+	&-click {
+    position: absolute;
+    bottom: 5%;
+    right: 43%;
+    background:rgba(0,0,0,0.7);
+    width: 141px;
+    padding: 2px 22px;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+	&-copy {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 30px;
+		height: 30px;
+		background: transparent url('../assets/img/icon-copy.svg') no-repeat center center;
+		opacity: .5;
+		cursor: pointer;
+		@extend %border-radius;
+		@extend %transition-all-text;
+
+		&:hover {
+			background-color: $color-white;
+			opacity: 1;
+			@extend %shadow-box;
+		}
+		&:active {
+			background-color: $color-white;
+			opacity: 1;
+			@extend %shadow-none;
+		}
+	}
 }
