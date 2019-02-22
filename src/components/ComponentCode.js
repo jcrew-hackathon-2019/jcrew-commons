@@ -2,7 +2,6 @@ export default {
   jcrewButtonCode: (
 `import React, { Component } from 'react'
 import cx from 'classnames'
-import ButtonSection from './Sections/ButtonSection';
 
 class JcrewButton extends Component {
 
