@@ -1,7 +1,7 @@
 export default {
     "code[class*=\"language-\"]": {
         "fontFamily": "Consolas, Menlo, Monaco, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", \"Courier New\", Courier, monospace",
-        "fontSize": "14px",
+        "fontSize": "12px",
         "lineHeight": "1.375",
         "direction": "ltr",
         "textAlign": "left",
@@ -20,7 +20,7 @@ export default {
     },
     "pre[class*=\"language-\"]": {
         "fontFamily": "Consolas, Menlo, Monaco, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", \"Courier New\", Courier, monospace",
-        "fontSize": "14px",
+        "fontSize": "12px",
         "lineHeight": "1.375",
         "direction": "ltr",
         "textAlign": "left",
@@ -95,13 +95,13 @@ export default {
         "Opacity": ".7"
     },
     "tag": {
-        "color": "#e09142"
+        "color": "#E800A3"
     },
     "operator": {
-        "color": "#e09142"
+        "color": "#E800A3"
     },
     "number": {
-        "color": "#e09142"
+        "color": "#E800A3"
     },
     "property": {
         "color": "#00CD4F"
@@ -119,10 +119,10 @@ export default {
         "color": "#eeebff"
     },
     "code.language-javascript": {
-        "color": "#c4b9fe"
+        "color": "#0076FF"
     },
     "attr-name": {
-        "color": "#c4b9fe"
+        "color": "#0076FF"
     },
     "code.language-css": {
         "color": "#0076FF"
@@ -194,7 +194,7 @@ export default {
     },
     "important": {
         "fontWeight": "bold",
-        "color": "#c4b9fe"
+        "color": "#0076FF"
     },
     "bold": {
         "fontWeight": "bold"
@@ -204,10 +204,10 @@ export default {
         "OutlineOffset": ".4em"
     },
     ".line-numbers .line-numbers-rows": {
-        "borderRightColor": "#2c2937"
+        "borderRightColor": "#E5E5E5"
     },
     ".line-numbers-rows > span:before": {
-        "color": "#3c3949"
+        "color": "#000"
     },
     ".line-highlight": {
         "background": "linear-gradient(to right, rgba(224, 145, 66, 0.2) 70%, rgba(224, 145, 66, 0))"
