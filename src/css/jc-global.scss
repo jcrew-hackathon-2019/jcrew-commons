@@ -1,0 +1,111 @@
+$color-grey-input:#CCC;
+$color-grey-border:#DDD;
+$color-grey-text:#666;
+$color-white:#FFF;
+$color-black:#000;
+$color-grey-bg-light:#F2F2F2;
+$color-grey-bg-lightest:#F8F8F8;
+$color-red:#DC3737;
+$color-blue:#0161FF;
+$color-blue-dark:#023B98;
+
+@mixin border-radius($radius...) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	        border-radius: $radius;
+}
+@mixin box-shadow($shadows...) {
+	-webkit-box-shadow: $shadows;
+	   -moz-box-shadow: $shadows;
+	        box-shadow: $shadows;
+}
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	   -moz-transition: $transition;
+	    -ms-transition: $transition;
+	     -o-transition: $transition;
+	        transition: $transition;
+}
+@mixin rewards-gradient($from, $to) {
+  background: $to;
+	background: -moz-linear-gradient(210deg, $from 20%, $to 80%);
+	background: -webkit-gradient(linear, 210deg, color-stop(20%,$from), color-stop(80%,$to));
+	background: -webkit-linear-gradient(210deg, $from 20%, $to 80%);
+	background: -o-linear-gradient(210deg, $from 20%, $to 80%);
+	background: linear-gradient(210deg, $from 20%, $to 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+}
+
+%transition-all {
+	@include transition(all .3s ease-in-out 0s);
+}
+%transition-all-text {
+	@include transition(all .2s ease-in-out 0s);
+}
+%border-radius {
+	@include border-radius(3px);
+}
+%border-radius-pill {
+	@include border-radius(500px);
+}
+%button-shadow {
+	@include box-shadow(0 1px 3px 0 rgba(0,0,0,0.25));
+}
+%box-shadow {
+	@include box-shadow(0px 0px 10px rgba(0,0,0,.05));
+}
+
+@mixin bp($point) {
+
+  $bp-iphonex:
+	"(device-width : 375px)
+  and (device-height : 812px)
+	and (-webkit-device-pixel-ratio : 3)";
+	$bp-600:		"(max-width: 600px)";
+  $bp-768:		"(max-width: 768px)";
+  $bp-1024:	  "(max-width: 1024px)";
+  $bp-1440:		"(max-width: 1440px)";
+
+  @if $point == 1440 {
+     @media #{$bp-1440} { @content; }
+  }
+
+	@else if $point == 1024 {
+    @media #{$bp-1024} { @content; }
+  }
+
+  @else if $point == 768 {
+    @media #{$bp-768} { @content; }
+  }
+
+  @else if $point == 600 {
+    @media #{$bp-600}  { @content; }
+  }
+
+  @else if $point == iphonex {
+    @media #{$bp-iphonex}  { @content; }
+  }
+}
+%img {
+	display: block;
+	max-width: 100%;
+}
+
+.commons--content-examples {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: soleil, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: .3px;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+
+	input, button, select, textarea {
+		font-family: soleil, serif;
+		-webkit-font-smoothing: antialiased;
+	}
+
+}

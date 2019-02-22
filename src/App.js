@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './app.scss';
-import './app2.scss'
+import React, { Component } from 'react'
+import './css/app.scss'
+import './css/app2.scss'
 
 import Sidebar from './components/Sidebar'
 import Welcome from './components/Sections/Welcome'

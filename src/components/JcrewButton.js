@@ -18,9 +18,9 @@ class JcrewButton extends Component {
 
     return (
       <button
-        className={cx(className `button--${theme}`, {
-          'pending': pending,
-          'disabled': disabled,
+        className={cx(`button button--${theme}`, className,  {
+          'button--pending': pending,
+          'button--disabled': disabled,
         })}
         onClick={onClick}
         {...rest}

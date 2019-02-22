@@ -4,7 +4,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class SyntaxBlock extends Component {
   state = {
-    currentHeight: '250px',
+    currentHeight: this.props.autoHeight ? 'auto' : '250px',
     clickLabel: 'Click to expand',
     ifExpanded: false,
   }
@@ -17,13 +17,25 @@ class SyntaxBlock extends Component {
   }
 
   render() {
-    const {currentHeight, clickLabel, ifExpanded} = this.state
-    const {codeSample} = this.props
+    const {
+      currentHeight,
+      clickLabel,
+      ifExpanded,
+    } = this.state
+    const {
+      code,
+      noExpand,
+      style,
+    } = this.props
     return (
-      <div className="syntax-container" onClick={!ifExpanded && this.toggleHeight} style={{'height':currentHeight, 'cursor':!ifExpanded && 'pointer'}}>
-        <div className="syntax-container-click" onClick={this.toggleHeight} >{clickLabel}</div>
+      <div
+        className="syntax-container"
+        onMouseDown={!ifExpanded && !noExpand ? this.toggleHeight : null}
+        style={{'height':currentHeight, 'cursor':!ifExpanded && 'pointer', ...style}}
+      >
+        {!noExpand && <div className="syntax-container-click" onClick={this.toggleHeight} >{clickLabel}</div>}
         <div onClick={e => e.stopPropagation()}>
-          <CopyToClipboard text={codeSample}>
+          <CopyToClipboard text={code}>
             <button className="syntax-container-copy">Copy</button>
           </CopyToClipboard>
         </div>
@@ -32,7 +44,7 @@ class SyntaxBlock extends Component {
           showLineNumbers
           customStyle={{'height': currentHeight}}
         >
-          {codeSample}
+          {code}
         </SyntaxHighlighter>
       </div>
     )
