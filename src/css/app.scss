@@ -51,6 +51,9 @@ $color-green-alt:#00AD77;
 %shadow-box {
 	@include box-shadow(0px 1px 2px rgba(0,0,0,.15));
 }
+%shadow-none {
+	@include box-shadow(0px 1px 2px rgba(0,0,0,.0));
+}
 
 @mixin bp($point) {
 
@@ -213,6 +216,7 @@ img {
 					height: 40px;
 					line-height: 40px;
 					color: $color-black;
+					@extend %transition-all-text;
 					&:hover {
 						background: $color-gray;
 					}
@@ -298,17 +302,88 @@ img {
 						}
 
 						dd {
+							position: relative;
 							padding: 15px;
 							width: 50%;
+							background: $color-gray;
+							@extend %border-radius;
+
+							code {
+								position: relative;
+							}
+
 						}
 					}
 				}
 
 				.commons--content-code {
 					padding: 30px 0;
-
 				}
 			}
+		}
+		&.commons--content-properties {
+			.commons--content-property {
+					margin-bottom: 30px;
+
+				.commons--content-property-header {
+					margin: 10px 0;
+					border-bottom: 1px solid $color-gray-border;
+
+					code {
+						font-size: 13px;
+						padding: 4px 6px;
+						@extend %border-radius;
+					}
+					code:first-child {
+						background: red;
+
+					}
+					code:last-child {
+						background: blue;
+					}
+				}
+			}
+		}
+	}
+}
+.syntax-container {
+	overflow: hidden;
+  margin: 0 auto;
+  width: 800px;
+  position: relative;
+	&-click {
+    position: absolute;
+    bottom: 5%;
+    right: 43%;
+    background:rgba(0,0,0,0.7);
+    width: 141px;
+    padding: 2px 22px;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+	&-copy {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 30px;
+		height: 30px;
+		background: transparent url('../assets/img/icon-copy.svg') no-repeat center center;
+		opacity: .5;
+		cursor: pointer;
+		@extend %border-radius;
+		@extend %transition-all-text;
+
+		&:hover {
+			background-color: $color-white;
+			opacity: 1;
+			@extend %shadow-box;
+		}
+		&:active {
+			background-color: $color-white;
+			opacity: 1;
+			@extend %shadow-none;
 		}
 	}
 }
