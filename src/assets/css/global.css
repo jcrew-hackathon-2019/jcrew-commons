@@ -1,4 +1,4 @@
-.commons--nav .commons--nav-subnav ul li a, .commons--content section.commons--content-usage .commons--content-code, .commons--content section.commons--content-usage .commons--content-examples {
+.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -9,7 +9,7 @@
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
 
-.commons--content section.commons--content-usage .commons--content-code, .commons--content section.commons--content-usage .commons--content-examples {
+.commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15); }
@@ -55,7 +55,7 @@ h3 {
   font-size: 11px;
   line-height: 11px;
   text-transform: uppercase;
-  color: #000;
+  color: #05AF71;
   letter-spacing: 0; }
 
 a {
@@ -91,11 +91,19 @@ img {
         text-indent: -9999px;
         background: url("../img/jcrew-commons-logo.svg") no-repeat center center; }
   .commons--nav .commons--nav-subnav {
-    padding: 30px 0;
+    padding: 0;
     width: 240px;
     height: 100%;
     background: #FFF;
     overflow: scroll; }
+    .commons--nav .commons--nav-subnav .commons--subnav-header {
+      margin: 18px 0 30px 15px; }
+      .commons--nav .commons--nav-subnav .commons--subnav-header a {
+        display: block;
+        width: 134px;
+        height: 26px;
+        text-indent: -9999px;
+        background: url("../img/commons-logo.svg") no-repeat left top; }
     .commons--nav .commons--nav-subnav ul {
       list-style: none;
       margin-bottom: 25px;
@@ -121,10 +129,48 @@ img {
   .commons--content section {
     margin: 0 auto;
     padding: 30px;
+    min-width: 640px;
     max-width: 960px; }
-    .commons--content section.commons--content-usage .commons--content-code {
+    .commons--content section.commons--content-header h1 {
+      margin-bottom: 15px; }
+    .commons--content section.commons--content-header p {
+      margin-bottom: 30px; }
+    .commons--content section .commons--content-example {
+      position: relative;
+      width: 100%;
+      height: 480px;
       background: #FFF; }
-    .commons--content section.commons--content-usage .commons--content-examples {
+      .commons--content section .commons--content-example .commons--example-container {
+        position: relative;
+        margin: 0 auto;
+        width: 372px;
+        height: 100%;
+        display: table; }
+        .commons--content section .commons--content-example .commons--example-container .commons--example-buttons {
+          display: table-cell;
+          vertical-align: middle; }
+          .commons--content section .commons--content-example .commons--example-container .commons--example-buttons .commons--example-buttons-atb {
+            margin-bottom: 12px; }
+          .commons--content section .commons--content-example .commons--example-container .commons--example-buttons .commons--example-buttons-secondary {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; }
+    .commons--content section.commons--content-usage .commons--content-variations {
       background: #FFF; }
+      .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples {
+        padding: 30px 0;
+        border-bottom: 1px solid #F5F5F5; }
+        .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl {
+          margin: 30px;
+          display: flex; }
+          .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dt {
+            padding: 15px;
+            width: 50%;
+            max-width: 375px; }
+          .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd {
+            padding: 15px;
+            width: 50%; }
+      .commons--content section.commons--content-usage .commons--content-variations .commons--content-code {
+        padding: 30px 0; }
 
 /*# sourceMappingURL=global.css.map */

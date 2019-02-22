@@ -131,7 +131,7 @@ h3 {
 	font-size: 11px;
 	line-height: 11px;
 	text-transform: uppercase;
-	color: $color-black;
+	color: $color-green;
 	letter-spacing: 0;
 }
 a {
@@ -180,11 +180,23 @@ img {
 	}
 	
 	.commons--nav-subnav {
-		padding: 30px 0;
+		padding: 0;
 		width: 240px;
 		height: 100%;
 		background: $color-white;
 		overflow: scroll;
+		
+		.commons--subnav-header {
+			margin: 18px 0 30px 15px;
+			
+			a {
+				display: block;
+				width: 134px;
+				height: 26px;
+				text-indent: -9999px;
+				background: url('../img/commons-logo.svg') no-repeat left top;	
+			}
+		}
 		
 		ul {
 			list-style: none;
@@ -221,21 +233,82 @@ img {
 	section {
 		margin: 0 auto;
 		padding: 30px;
+		min-width: 640px;
 		max-width: 960px;
+		
+		&.commons--content-header {
+			h1 {
+				margin-bottom: 15px;
+			}
+			p {
+				margin-bottom: 30px;
+			}
+		}
+		
+		.commons--content-example {
+			position: relative;
+			width: 100%;
+			height: 480px;
+			background: #FFF;
+			@extend %border-radius;
+			@extend %shadow-box;
+			
+			.commons--example-container {
+				position: relative;
+				margin: 0 auto;
+				width: 372px;
+				height: 100%;
+				display: table;
+				
+				.commons--example-buttons {
+					display: table-cell;
+					vertical-align: middle;
+					
+					.commons--example-buttons-atb {
+						margin-bottom: 12px;
+					}
+					
+					.commons--example-buttons-secondary {
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+					}
+				}			
+			}
+		}
 		
 		&.commons--content-usage {
 			
-			.commons--content-code {
+			.commons--content-variations {
 				background: #FFF;
 				@extend %border-radius;
-				@extend %shadow-box;	
-			}	
-			
-			.commons--content-examples {
-				background: #FFF;
-				@extend %border-radius;
-				@extend %shadow-box;			
-			}			
+				@extend %shadow-box;
+				
+				.commons--content-examples {
+					padding: 30px 0;
+					border-bottom: 1px solid $color-gray;
+					dl {
+						margin: 30px;
+						display: flex;
+						
+						dt {
+							padding: 15px;
+							width: 50%;
+							max-width: 375px;
+						}
+						
+						dd {
+							padding: 15px;
+							width: 50%;
+						}	
+					}
+				}	
+				
+				.commons--content-code {
+					padding: 30px 0;
+				
+				}				
+			}		
 		}
 	}
 }
