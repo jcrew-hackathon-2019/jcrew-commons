@@ -27,6 +27,7 @@ class SyntaxBlock extends Component {
       code,
       noExpand,
       style,
+      noCopy,
     } = this.props
     return (
       <div
@@ -36,9 +37,9 @@ class SyntaxBlock extends Component {
       >
         {!noExpand && <div className="syntax-container-click" onClick={this.toggleHeight} >{clickLabel}</div>}
         <div onClick={e => e.stopPropagation()}>
-          <CopyToClipboard text={code}>
+          {!noCopy && <CopyToClipboard text={code}>
             <button className="syntax-container-copy"/>
-          </CopyToClipboard>
+          </CopyToClipboard>}
         </div>
         <SyntaxHighlighter
           language='jsx'

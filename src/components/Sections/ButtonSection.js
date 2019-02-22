@@ -24,7 +24,14 @@ class ButtonSection extends Component {
         </section>
         <section class="commons--content-usage">
           <h2>Usage</h2>
-          <code class=""></code>
+          <div class="commons--import-code">
+            <SyntaxBlock
+              code={`import { JcrewButton } from 'jcrew-commons`}
+              style={{'width': 'auto'}}
+              noExpand
+              autoHeight
+            />
+          </div>
           <h2>Variations</h2>
           <div class="commons--content-variations">
             <div class="commons--content-examples">
@@ -263,7 +270,13 @@ class ButtonSection extends Component {
                 </dd>
               </dl>
             </div>
-            <div class="commons--content-code"></div>
+            <div class="commons--content-code">
+              <SyntaxBlock
+                code={Code.jcrewButtonCode}
+                style={{'width': 'auto'}}
+                noCopy
+              />
+            </div>
             </div>
         </section>
         <section class="commons--content-properties">
