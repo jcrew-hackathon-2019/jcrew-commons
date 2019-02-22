@@ -5,7 +5,7 @@
   -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s; }
 
-.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd, .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code, .syntax-container-copy {
+.commons--nav .commons--nav-subnav ul li a, .commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--import-code, .commons--content section.commons--content-usage .commons--content-variations, .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples dl dd, .commons--content section.commons--content-properties .commons--content-property .commons--content-property-header code, .syntax-container-copy {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -16,7 +16,7 @@
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15); }
 
-.commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--content-variations, .syntax-container-copy:hover {
+.commons--content section .commons--content-example, .commons--content section.commons--content-usage .commons--import-code, .commons--content section.commons--content-usage .commons--content-variations, .syntax-container-copy:hover {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15); }
@@ -167,6 +167,11 @@ img {
             display: flex;
             justify-content: space-between;
             width: 100%; }
+    .commons--content section.commons--content-usage .commons--import-code {
+      margin-bottom: 60px;
+      background: #FFF;
+      min-height: 36px;
+      width: 100%; }
     .commons--content section.commons--content-usage .commons--content-variations {
       background: #FFF; }
       .commons--content section.commons--content-usage .commons--content-variations .commons--content-examples {

@@ -282,7 +282,14 @@ img {
 		}
 		
 		&.commons--content-usage {
-			
+			.commons--import-code {
+				margin-bottom: 60px;
+				background: #FFF;
+				min-height: 36px;
+				width: 100%;
+				@extend %border-radius;
+				@extend %shadow-box;				
+			}
 			.commons--content-variations {
 				background: #FFF;
 				@extend %border-radius;
